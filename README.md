@@ -86,9 +86,10 @@ _A quick note about `_layouts/`:_
 All active pages on the site inherit their layout from `_layouts/default.html`, so changes made to this file will reflect throughout the entire site.
 
 - **index.html**: pyiron's home page. Customized quite a bit.
-- **about.html**: A brief description of pyiron's features.
+<<<<<<< HEAD
 - **team.html**: Pulls developer names and information from `_data/core-developers.yml` and `_data/steering-committee.yml`, and pulls other github contributors from the Github API.
-- **try-pyiron.html**: Basic instructions for starting and using the MyBinder instance.
+- **getting-started.html**: Basic instructions for starting and using the MyBinder instance.
+- **news.html**: New updates for pyiron. Pulls from `_data/news.yml`.
 - **privacy.html**: A very basic GDPR page about how we use visitors' data (we don't use visitors' data).
 - **license.html**: Information about the license/credits for pyiron and this website.
 - **404.html**: Renders when a searched page cannot be found.
