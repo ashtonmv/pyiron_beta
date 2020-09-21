@@ -15,10 +15,17 @@ description: Optimized protocols and data management for high-powered research
 		<h1 class="editable"><strong>Complex workflows made easy</strong></h1>
 		<p class="subtext editable">From rapid prototyping to high performance computing in material science</p>
 		<div class="cta button alt"><a href="https://github.com/pyiron/pyiron" target="_blank">Browse on Github</a></div>
-		{% capture my_include %}{% include conda_install.md %}{% endcapture %}
-		{{ my_include | markdownify }}
-		<div>
-			<img src="{{ site.baseurl }}/images/dashboard.png" alt="Screenshot" class="screenshot editable" data-aos="fade-up" data-aos-offset="300"/>
+		<div style="width: 100%; display: flex; justify-content: center;">
+			<div class="highlight language-sh" id="condaBox">
+				<div style="padding: 25px 35px 25px 0px;">
+					<code id="condaInstall"></code>
+				</div>
+			</div>
+		</div>
+		<div style="width: 100%; display: flex; justify-content: center;">
+			<div id="screenshot" data-aos="fade-up" data-aos-offset="3000">
+				<img src="{{ site.baseurl }}/images/dashboard.png" alt="Screenshot" class="screenshot editable" data-aos="fade-up" data-aos-offset="-300"/>
+			</div>
 		</div>
 	</div>
 </section>
@@ -40,7 +47,7 @@ description: Optimized protocols and data management for high-powered research
 					<h2>{{ feature.header }}</h2>
 					{{ feature.content }}
 				</div>
-				<img class="feature-icon" src="{{ feature.icon | relative_url }}" data-aos="{{ image-aos }}" data-aos-offset="300"/>
+				<img class="feature-icon" src="{{ feature.icon | relative_url }}" data-aos="{{ image-aos }}" data-aos-offset="330"/>
 			</div>
 			<div class="container flex" style="justify-content: center;">
 				<div class="feature" data-aos="fade-up" data-aos-offset="100">
@@ -106,5 +113,6 @@ description: Optimized protocols and data management for high-powered research
 	</section>
 </div>
 
+{% include typewrite.html %}
 {% include animate_on_scroll.html %}
 {% include juniper.html server="pyiron/pyiron" %}

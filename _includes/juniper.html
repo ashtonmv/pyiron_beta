@@ -6,9 +6,11 @@
     // like the .sh tab on the homepage's conda install snippet
     for (var i=0; i<$("div.highlight").length; i++) {
         var snippet = $("div.highlight")[i];
-        var rouge = $(snippet).parent();
-        var syntax = $(rouge).attr("class").replace("highlighter-rouge", "");
-        $(snippet).addClass(syntax);
+        if ($(snippet).attr("id") != "condaBox") {
+            var rouge = $(snippet).parent();
+            var syntax = $(rouge).attr("class").replace("highlighter-rouge", "");
+            $(snippet).addClass(syntax);
+        }
     }
 
     // Convert highlighted python snippets to runnable
