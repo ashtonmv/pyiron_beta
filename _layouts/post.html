@@ -33,7 +33,7 @@ layout: page
 
 {% if page.code %}
 
-	<div class="container notebook">
+	<div class="container notebook max-container">
 		{% capture my_include %}{% include {{ page.code }} %}{% endcapture %}
 		{{ my_include | markdownify }}
 	</div>

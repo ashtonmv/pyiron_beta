@@ -34,6 +34,11 @@
 
 .notebook {
 	padding-bottom: 0px;
+
+	.highlight {
+		margin: 40px 0px 40px 0px;
+	}
+
 	h1 {
 		text-align: center;
 		border-bottom: 2px solid $main-color;
@@ -51,12 +56,16 @@
 
 }
 
-.notebook > * {
-	margin: 10px 60px;
-}
+@media #{$tablet} {
 
-.notebook > figure {
-	margin: 60px;
+	.notebook > * {
+		margin: 20px 60px;
+	}
+	
+	.notebook > figure {
+		margin: 60px;
+	}
+
 }
 
 header {
