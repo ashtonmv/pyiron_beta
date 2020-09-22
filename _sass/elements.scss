@@ -8,7 +8,7 @@ html, body {
 }
 
 body {
-	font-family: "San Francisco", "Helvetica Neue", "Helvetica", "Arial";
+	font-family: "Helvetica", "Arial", sans-serif;
 }
 
 #condaBox {
@@ -203,8 +203,8 @@ code {
 	font-family: $mono-font;
 	letter-spacing: 0.3px;
 	word-spacing: 1px;
-	background: $main-color;
-	color: #F8F8F2;
+	background: $code-background;
+	color: white;
 
 	.CodeMirror-lines {
 		padding: 8px 0;
@@ -212,53 +212,53 @@ code {
 	.CodeMirror-gutters {
 		box-shadow: 1px 0 2px 0 rgba(0, 0, 0, 0.5);
 		-webkit-box-shadow: 1px 0 2px 0 rgba(0, 0, 0, 0.5);
-		background-color: $main-color;
+		background-color: $code-background;
 		padding-right: 10px;
 		z-index: 3;
 		border: none;
 	}
 	div.CodeMirror-cursor {
-		border-left: 3px solid #F8F8F2;
+		border-left: 3px solid $secondary-color;
 	}
 	.CodeMirror-activeline-background {
 		background: #49483E;
 	}
 	.CodeMirror-selected {
-		background: rgba(0, 0, 0, 0.5);
+		background: lighten($code-background, 10%);
 	}
 	.cm-comment {
 		color: white;
 	}
 	.cm-string {
-		color: #E6DB74;
+		color: $yellow;
 	}
 	.cm-number {
-		color: #66D9EF;
+		color: lighten($blue, 20%);
 	}
 	.cm-atom {
-		color: #66D9EF;
+		color: $blue;
 	}
 	.cm-keyword {
-		color: #F92672;
+		color: $pink;
 	}
 	.cm-variable {
-		color: #A6E22E;
+		color: $green;
 	}
 	.cm-def {
 		font-style: italic;
-		color: #FD971F;
+		color: $orange;
 	}
 	.cm-variable-2 {
-		color: #F92672;
+		color: $red;
 	}
 	.cm-property {
-		color: #66D9EF;
+		color: darken($blue, 10%);
 	}
 	.cm-operator {
-		color: #F92672;
+		color: $pink;
 	}
 	.CodeMirror-linenumber {
-		color: #75715E;
+		color: $gray;
 	}
 }
 
@@ -272,7 +272,7 @@ pre {
 
 div.highlight, figure.highlight {
 	border: 2px solid white;
-	color: $text;
+	color: white;
 	width: auto;
 }
 
@@ -365,40 +365,25 @@ div.highlight {
 	}
 }
 
-div.highlight::before {
+.tab {
 	color: white;
-	font-family: "San Francisco", "Helvetica Neue", "Helvetica", "Arial";
-	content: "</>";
-	background:rgba(0, 0, 0, 0.5);
+	font-family: $mono-font;
+	background: $code-background;
 	border: 2px solid white;
 	border-radius: 8px 8px 0px 0px;
-	padding: 6px 10px;
+	padding: 2px 10px;
 	display: inline-block;
 	position: relative;
 	float: left;
-	top: -34px;
+	top: -32px;
 	left: -2px;
 	overflow: show;
 	text-align: right;
 }
 
-#condaBox::before {
-	color: $main-color;
-	background:white;
-}
-
-div.highlight.language-python::before {
-	content: ".py";
-}
-
-div.highlight.language-sh::before {
-	content: ".sh";
-}
-
-div.highlight.language-yaml::before {
-	content: ".yml";
-}
-
-div.highlight.language-javascript::before {
-	content: ".js";
+#condaBox {
+	.tab {
+		color: $main-color;
+		background:white;
+	}
 }
