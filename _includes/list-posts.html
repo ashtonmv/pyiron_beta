@@ -5,11 +5,11 @@
 	{% assign n_posts = n_posts | plus: 1 %}
 	<div id="post{{n_posts}}" class="news-card blog-post"
 	{% if post.categories contains "news" and news_icons contains post.categories[1] %}
-		style="background-image: url(/images/news-icon-{{ post.categories[1] }}.png)"
+		style="background-image: url({{ site.baseurl }}/images/news-icon-{{ post.categories[1] }}.png)"
 	{% else if post.categories contains "publications" %}
-		style="background-image: url(/images/news-icon-documentation.png)"
+		style="background-image: url({{ site.baseurl }}/images/news-icon-documentation.png)"
 	{% else %}
-		style="background-image: url(/images/news-icon-default.png)"
+		style="background-image: url({{ site.baseurl }}/images/news-icon-default.png)"
 	{% endif %}
 		>
 		<h3 style="color: {{ site.colors.main }}">{{ post.date | date: "%b %d, %Y"  }}</h3>

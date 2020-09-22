@@ -10,7 +10,7 @@ description: Optimized protocols and data management for high-powered research
 			{{ site.alert }}
 		</div>
 	{% endif %}
-	<img class="main-logo" src="images/logo.png"></img>
+	<img class="main-logo" src="{{ 'images/logo.png' | relative_url }}"></img>
 	<div class="text-container">
 		<h1 class="editable"><strong>Complex workflows made easy</strong></h1>
 		<p class="subtext editable">From rapid prototyping to high performance computing in material science</p>
@@ -76,14 +76,14 @@ description: Optimized protocols and data management for high-powered research
 		{% elsif i == 3 %} data-aos="fade-left"
 		{% endif %} data-aos-offset="100"
 		{% if news_icons contains post.categories[1] %}
-			style="background-image: url(/images/news-icon-{{ post.categories[1] }}.png)"
+			style="background-image: url({{ site.baseurl }}/images/news-icon-{{ post.categories[1] }}.png)"
 		{% else %}
-			style="background-image: url(/images/news-icon-default.png)"
+			style="background-image: url({{ site.baseurl }}/images/news-icon-default.png)"
 		{% endif %}
 			>
 		<h3 style="color: {{ site.colors.main }}">{{ post.date | date: "%b %d, %Y"  }}</h3>
 		<p>
-		<a href="{{ post.url }}">
+		<a href="{{ post.url | relative_url }}">
 			{{ post.title }}
 		</a>
 			<div class="post-details">
