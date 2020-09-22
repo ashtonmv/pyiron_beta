@@ -349,11 +349,13 @@ div.highlight, figure.highlight {
 figure.highlight {
 	border-radius: 8px 0px 10px 10px;
 	background: $main-color;
+	color: white;
 }
 
 div.highlight {
 	border-radius: 0px 8px 10px 10px;
 	background: $main-color;
+	color: white;
 
 	pre {
 		padding: 0px 25px;
