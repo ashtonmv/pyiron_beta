@@ -14,7 +14,7 @@
 		>
 		<h3 style="color: {{ site.colors.main }}">{{ post.date | date: "%b %d, %Y"  }}</h3>
 		<p>
-		<a href="{{ post.url }}">
+		<a href="{{ post.url | relative_url }}">
 			{{ post.title }}
 		</a>
 			<div class="post-details">
