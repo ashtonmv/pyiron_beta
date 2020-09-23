@@ -38,6 +38,5 @@ layout: page
 		{{ my_include | markdownify }}
 	</div>
 
-	{% assign server = page.mybinder | split: "/" | slice: 5, 2 | join: "/" %}
-	{% include juniper.html server=server %}
+	{% include juniper.html server="ashtonmv/pyiron_binder" %}
 {% endif %}

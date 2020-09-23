@@ -22,7 +22,9 @@
 
 // Initialize the link to MyBinder via Juniper
 new Juniper({
+    url: "https://binder.michael-ashton.com",
     repo: "{{ include.server }}",
+    useStorage: false,
     theme: 'monokai',
     isolateCells: false,
     msgLoading: " ",  // 
