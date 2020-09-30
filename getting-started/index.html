@@ -14,4 +14,7 @@ description:
     {{ my_include | markdownify }}
 </div>
 
-{% include juniper.html server="ashtonmv/pyiron_binder" %}
+{% capture my_include %}```python print("HELLO")```{% endcapture %}
+{{ my_include | markdownify }}
+
+{% include juniper.html %}

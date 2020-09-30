@@ -35,10 +35,10 @@ $code-font-size: 18px;
 
 $syntax-hue: 350;
 $syntax-saturation: 100%;
-$syntax-brightness: 95%;
+$syntax-brightness: 100%;
 
 $base: darken($purple, 5%);
 $text: hsl($syntax-hue, $syntax-saturation, $syntax-brightness);
-$subtle: hsl($syntax-hue, $syntax-saturation, 80%);
+$subtle: $secondary-color;
 $highlight: hsl($syntax-hue, $syntax-saturation, 100%);
 $err: $red;

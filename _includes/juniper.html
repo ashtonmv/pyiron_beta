@@ -22,11 +22,13 @@
 
 // Initialize the link to MyBinder via Juniper
 new Juniper({
-    url: "https://mybinder.org",
-    repo: "{{ include.server }}",
-    theme: 'monokai',
-    isolateCells: false,
-    msgLoading: " ",  // 
+    url: "{{ site.data.juniper.url }}",
+    repo: "{{ site.data.juniper.repo }}",
+    theme: "{{ site.data.juniper.theme }}",
+    useStorage: "{{ site.data.juniper.useStorage }}",
+    isolateCells: "{{ site.data.juniper.isolateCells }}",
+    msgLoading: "{{ site.data.juniper.msgLoading }}",
+    noAutoInit: false
 })
 
 // Listen for events sent back by the jupyterlab KernelFutureHandler

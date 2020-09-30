@@ -346,14 +346,14 @@ div.highlight, figure.highlight {
 	.gi { color: $green; }
 }
 
-figure.highlight {
-	border-radius: 8px 0px 10px 10px;
-	background: $main-color;
-	color: white;
-}
+// figure.highlight {
+// 	border-radius: 8px 0px 10px 10px;
+// 	background: $main-color;
+// 	color: white;
+// }
 
-div.highlight {
-	border-radius: 0px 8px 10px 10px;
+.highlight {
+	border-radius: 0px 0px 10px 10px;
 	background: $main-color;
 	color: white;
 

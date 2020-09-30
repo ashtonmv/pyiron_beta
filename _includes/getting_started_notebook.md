@@ -18,6 +18,10 @@ import matplotlib.pylab as plt
 
 To import pyiron simply use:
 
+```python
+from pyiron import Project
+```
+
 {% highlight python %}
 from pyiron import Project
 {% endhighlight %}
